@@ -4,8 +4,9 @@ export default function Home() {
   return (
    <div >
     <div className="grid-background">
-      <HeroSection/>
+     
     </div>
+     <HeroSection/> 
    </div>
    
    
