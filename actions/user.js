@@ -1,6 +1,7 @@
 "use server";
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
+import { _success } from "zod/v4/core";
 
 export async function updateUser(data){
     const { userId } = await auth();
@@ -29,11 +30,11 @@ export async function updateUser(data){
                     industry: data.industry,
                     salaryRanges: [], //Default empty array
                     growthRate: 0, // Default value
-                    demandLevel: "Medium", // default value
+                    demandLevel: "MEDIUM", // default value
                     topSkills: [], //default empty array
-                    marketOutlook: "Neutral", //default value
+                    marketOutlook: "NEUTRAL", //default value
                     keyTrends: [], //default empty array
-                    recommendedSkills: [], //default empty array
+                    recommendedSKills: [], //default empty array
                     nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), //1 week from now
 
                 },
@@ -57,11 +58,11 @@ export async function updateUser(data){
             timeout: 10000, //default:5000
         }
     );
-    return result.user;
+    return {success: true, ...result};
         
     } catch(error) {
         console.error("Error updating user and industry:", error.message);
-        throw new Error("Failed to update profile");
+        throw new Error("Failed to update profile" + error.message);
 
     }
 }

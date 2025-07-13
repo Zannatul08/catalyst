@@ -12,7 +12,6 @@ generator client {
   provider = "prisma-client-js"
 }
 
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -31,9 +30,8 @@ model User {
   experience      Int? //Years of experience
   skills          String[] //Array of skills
   assessments     Assessment[]
-  resume          Resume?         
+  resume          Resume?
   coverLetter     CoverLetter[]
- 
 }
 
 model Assessment {
@@ -53,13 +51,12 @@ model Assessment {
 model Resume {
   id        String   @id @default(cuid())
   userId    String   @unique //one resume per user
-  user User @relation(fields: [userId],references: [id])
+  user      User     @relation(fields: [userId], references: [id])
   content   String   @db.Text
   atsScore  Float?
   feedback  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
 }
 
 model CoverLetter {
