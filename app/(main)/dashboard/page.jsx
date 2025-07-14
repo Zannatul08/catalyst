@@ -11,7 +11,7 @@ const IndustryInsightsPage = async () => {
     return <div className="text-red-500 text-center mt-20">User not found</div>;
   }
 
-  const { isOnboarded } = await getUserOnboardingStatus();
+  const { isOnboarded } = await getUserOnboardingStatus(user.id);
   const insights = await getIndustryInsights();
 
   if (!isOnboarded) {
