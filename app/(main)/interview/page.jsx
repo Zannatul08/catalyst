@@ -1,6 +1,7 @@
 const InterviewPage = () => {
-    return <div>InterviewPage</div>;
-    
-  };
+  return <div>InterviewPage</div>;
+  
+};
+
   
   export default InterviewPage;
