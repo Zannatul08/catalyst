@@ -11,6 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Download, Save } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import EntryForm from "./entry-form";
 
 
 const ResumeBuilder = ({initialContent}) => {
@@ -159,6 +160,79 @@ const ResumeBuilder = ({initialContent}) => {
               />
               {errors.summary && (
                 <p className="text-sm text-red-500">{errors.summary.message}</p>
+              )}
+        </div>
+
+        <div className="space-y-4">
+              <h3 className="text-lg font-medium">Skills</h3>
+              <Controller
+                name="skills"
+                control={control}
+                render={({ field }) => (
+                  <Textarea
+                    {...field}
+                    className="h-32"
+                    placeholder="List your key skills..."
+                    error={errors.skills}
+                  />
+                )}
+              />
+              {errors.skills && (
+                <p className="text-sm text-red-500">{errors.skills.message}</p>
+              )}
+        </div>
+
+        <div className="space-y-4">
+              <h3 className="text-lg font-medium">Work Experience</h3>
+              <Controller
+                name="experience"
+                control={control}
+                render={({ field }) => (
+                 <EntryForm 
+                 type="Experience"
+                 entries={field.value}
+                 onChange={field.onChange}
+                 />
+                )}
+              />
+              {errors.experience && (
+                <p className="text-sm text-red-500">{errors.experience.message}</p>
+              )}
+        </div>
+
+         <div className="space-y-4">
+              <h3 className="text-lg font-medium">Education</h3>
+              <Controller
+                name="education"
+                control={control}
+                render={({ field }) => (
+                 <EntryForm 
+                 type="Education"
+                 entries={field.value}
+                 onChange={field.onChange}
+                 />
+                )}
+              />
+              {errors.education && (
+                <p className="text-sm text-red-500">{errors.education.message}</p>
+              )}
+        </div>
+
+         <div className="space-y-4">
+              <h3 className="text-lg font-medium">Projects</h3>
+              <Controller
+                name="projects"
+                control={control}
+                render={({ field }) => (
+                 <EntryForm 
+                 type="Project"
+                 entries={field.value}
+                 onChange={field.onChange}
+                 />
+                )}
+              />
+              {errors.projects && (
+                <p className="text-sm text-red-500">{errors.projects.message}</p>
               )}
         </div>
         
