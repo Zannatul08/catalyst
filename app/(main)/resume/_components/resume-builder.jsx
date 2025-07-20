@@ -70,7 +70,7 @@ const ResumeBuilder = ({initialContent}) => {
     <Tabs  value={activeTab} onValueChange={setActiveTab}>
   <TabsList>
     <TabsTrigger value="edit">Form</TabsTrigger>
-    <TabsTrigger value="Preview">Markdown</TabsTrigger>
+    <TabsTrigger value="preview">Markdown</TabsTrigger>
   </TabsList>
   <TabsContent value="edit">
     <form className="space-y-8" onSubmit={handleSubmit(onSubmit)}>
