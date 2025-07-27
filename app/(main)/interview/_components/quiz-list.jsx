@@ -105,7 +105,7 @@ const QuizList =({assessments}) =>{
       hideStartNew
       />
       
-   
+    
   </DialogContent>
 </Dialog>
 

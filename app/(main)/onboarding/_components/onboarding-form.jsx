@@ -93,7 +93,7 @@ const OnboardingForm = ({industries}) => {
   return (
  <div className="min-h-screen flex items-center justify-center 
   bg-gradient-to-br from-indigo via-purple-950 to-blue-950
-  px-4 py-10">
+  px-4 py-10 rounded-lg ">
 
     <Card className="w-full max-w-lg bg-black/50 backdrop-blur-md border border-gray-700 text-gray-100 shadow-2xl">
 

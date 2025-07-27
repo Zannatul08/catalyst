@@ -207,7 +207,7 @@ export default function Home() {
 
   {/* last */}
      <section className="w-full ">
-    <div className="bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 py-24 rounded-lg shadow-xl ring-1 ring-gray-300/30">
+    <div className="bg-gradient-to-b from-[#1A132F] via-[#2C1B3F] to-[#3F2B5A]  py-24 rounded-lg shadow-xl ring-1 ring-gray-300/30">
 
         <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-3xl mx-auto">
 
@@ -217,7 +217,7 @@ export default function Home() {
        <Button
        size="lg"
        variant="secondary"
-       className="h-11 mt-5 animate-bounce"
+       className="h-11 mt-5 animate-bounce  bg-gradient-to-r from-purple-900 to-purple-400 text-white shadow-lg hover:brightness-110 hover:scale-105 transition-all duration-300"
        >Start Your Journey Today <ArrowRight className="ml-2 h-4 w-4"/></Button></Link>
 
         </div>

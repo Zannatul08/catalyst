@@ -9,7 +9,7 @@ const InterviewPage =async () => {
 
   const assessments = await getAssessments();
 
-  return <div className="bg-gradient-to-br from-indigo via-purple-950 to-blue-950 
+  return <div className="rounded-lg p-8 bg-gradient-to-br from-indigo via-purple-950 to-blue-950 
  ">
  
       <h1 className="text-6xl font-bold gradient-title mb-5">Interview Preparation</h1>
