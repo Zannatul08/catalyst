@@ -143,8 +143,7 @@ const ResumeBuilder = ({ initialContent }) => {
       setIsGenerating(false);
     }
   };
-
-
+ 
   return (
     <div className="space-y-4">
       <div className="flex flex-col md:flex-row justify-between items-center gap-2">
@@ -388,8 +387,14 @@ const ResumeBuilder = ({ initialContent }) => {
               preview={resumeMode}
             />
           </div>
-         <div
-            style={{ visibility: "hidden", position: "absolute", top: 0, left: 0, zIndex: -1 }}
+          <div
+            style={{
+              display: "none",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: -1,
+            }}
           >
             <div id="resume-pdf">
               <MDEditor.Markdown
@@ -411,8 +416,3 @@ const ResumeBuilder = ({ initialContent }) => {
 };
 
 export default ResumeBuilder;
-
-
-
-
-
