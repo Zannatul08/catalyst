@@ -26,7 +26,7 @@ import QuizResult from "./quiz-result";
 
 const QuizList =({assessments}) =>{
     const router = useRouter();
-    const [selectedQuiz, setSElectedQuiz] = useState(null);
+    const [selectedQuiz, setSelectedQuiz] = useState(null);
 
     return(
         <>
@@ -54,7 +54,7 @@ const QuizList =({assessments}) =>{
 
                         <Card 
                         key={assessment.id}
-                        onClick={()=> setSElectedQuiz(assessment)}
+                        onClick={()=> setSelectedQuiz(assessment)}
                         className="bg-black/30 backdrop-blur-sm border border-gray-700 text-white shadow-2xl cursor-pointer hover:border-purple-400 transition-colors duration-200 " >
         <CardHeader>
             <CardTitle className="text-sm font-medium">
@@ -96,6 +96,7 @@ const QuizList =({assessments}) =>{
  
   <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
     <DialogHeader>
+        <DialogTitle>Quiz Result</DialogTitle>
   
       
       </DialogHeader>
